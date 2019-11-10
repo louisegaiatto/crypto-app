@@ -12,7 +12,7 @@ export default class Home extends React.Component {
 
         const {username} = this.state
 
-        fetch('https://api.github.com/users/${username}')
+        fetch(`https://api.github.com/users/${username}`)
         .then(res => res.json())
         .then(user => this.setState({user}))
         .catch(err => console.error(err))
@@ -33,13 +33,14 @@ export default class Home extends React.Component {
                         <p>{user.company}</p>
                     </div>
                 )}
-                <form onSubmit={this.handleSubmit}>
-                <input 
+                <form>
+                    <input 
                     type="text" 
                     placeholder="Type GitHub username..." 
                     onChange={e => this.setState({username: e.target.value})}
                     />
-                    <button type="submit">Go!</button>
+                    <div><pre>{JSON.stringify(this.state, null, 2)}</pre></div>
+                    <button type="submit" onClick={this.handleSumit}>Go!</button>
                 </form>
             </div>
         )
