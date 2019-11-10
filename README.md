@@ -1,5 +1,6 @@
 # electron-next-boilerplate
 Electron + Next.js boilerplate
+Código disponível https://github.com/louisegaiatto/nextJS-electron
 
 
 ### Getting Started
