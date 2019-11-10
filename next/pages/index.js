@@ -39,7 +39,7 @@ export default class Home extends React.Component {
                     placeholder="Type GitHub username..." 
                     onChange={e => this.setState({username: e.target.value})}
                     />
-                    <div><pre>{JSON.stringify(this.state, null, 2)}</pre></div>
+                    
                     <button type="submit" onClick={this.handleSumit}>Go!</button>
                 </form>
             </div>
